@@ -16,7 +16,7 @@
 from flask import *
 from datetime import timedelta
 from os import system, name  # clear the screen
-# from colorama import Fore
+from colorama import *
 import datetime
 import string
 import random
@@ -33,8 +33,8 @@ app.secret_key = b"This is but something of secret value don't you dare try and 
 app.permanent_session_lifetime = timedelta(days=30)
 
 # region debugging in terminals
-# colorama.init(autoreset=True)
-# RED = Fore.RED
+colorama.init(autoreset=True)  # this error doesn't matter it still works fine.
+RED = Fore.RED
 # endregion
 
 
