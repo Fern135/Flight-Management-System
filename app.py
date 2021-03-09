@@ -43,7 +43,23 @@ def home():  # home screen
     return render_template("index.html")
 
 
+# region api section
+@app.route('/api/getFlights', methods=['POST', 'GET'])
+def getFlights():  # api for getting the flights
+    try:
+        data = json.dumps(request.data)  # parsing the info via json requests
+
+        print(data)
+
+    except Exception as e:
+        log(str(e))
+        print(f"error {str(e)}")
+
+# endregion
+
 # region userful functions
+
+
 def get_time():  # get full 12 hour time
     x = datetime.datetime.now()
 
