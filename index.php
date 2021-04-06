@@ -1,6 +1,19 @@
 <?php 
 
-    include_once "./bin/include/front-end.include.php"; 
+
+    // checking the user information
+    if(isset($_POST['login-main'])){
+
+    }
+
+    /***********************/
+    /* make a default user */
+    /***********************/
+    function run_once(){
+        include_once "./bin/include/conn.include.php"; // db conn
+
+
+    }
 
 ?>
 <!DOCTYPE html>
@@ -12,14 +25,29 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <?php include "./bin/include/front-end.include.php"; ?>
+        <?php include "./bin/include/front-end-css.include.php"; ?>
 
     </head>
     <body id="body-login-main-css-js">
 
 
-        
 
+    <div class="card">
+        <div class="card-header">
+            <h1>
+                Login
+            </h1>
+        </div>
+        <div class="card-body">
+            <form action="#" method="post">
+            </form>
+        </div>
+        <div class="card-footer">
+            <div class="footer">
+                &copy; <script>document.write(new Date().getFullYear())</script>
+            </div>
+        </div>
+    </div>
         
 
         <?php include "./bin/include/front-end-js.include.php"; ?>
